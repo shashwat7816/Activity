@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Website Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #6b9a6b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #6b9a6b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            width: calc(50% - 30px);
+        }
+        .card h2 {
+            color: #4a4a4a;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Website Task</h1>
+    </header>
+    
+    <nav>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <div class="card">
+            <h2>About CSS</h2>
+            <p>Cascading Style Sheets (CSS) allow you to style and layout your page, adding colors, spacing, and more.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Box Model</h2>
+            <p>The CSS box model describes the rectangular boxes generated for elements. It includes margins, borders, padding, and the actual content.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Responsive Design</h2>
+            <p>Responsive design ensures your webpage looks good on all devices, from desktops to mobile phones.</p>
+        </div>
+    </div>
+    
+    <footer>
+        Created by Shashwat kashyap | Follow us on Instagaram
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+
+
+                    alert('Navigating to: ' + this.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
